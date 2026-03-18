@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search Concept</title>
+    <style>
+        /* 全体のレイアウト設定 */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #222; /* 背景色（画像に合わせる） */
+            color: #fff;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* スクロール無効 */
+        }
+
+        /* 1. 上部ナビゲーションバー（画像の上部） */
+        .header {
+            background-color: #00796B; /* 青緑色（画像に合わせる） */
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .header .icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header .icon {
+            font-size: 24px;
+        }
+
+        /* 2. 画像エリア（岩と下のバー） */
+        .content-area {
+            flex: 1;
+            position: relative;
+            background-image: url('https://w.wallhaven.cc/full/y8/wallhaven-y8r9j9.jpg'); /* 背景画像（画像に合わせる） */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* 3. 中央の白いテキストエリア（ここを検索窓にする） */
+        .search-area {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff; /* 白色 */
+            width: 80%;
+            height: 200px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+
+        /* 4. 画像のテキスト「犬」「いぬ」「犬」 */
+        .text-display {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            font-size: 36px;
+            color: #1A73E8; /* 青色（画像に合わせる） */
+            font-weight: bold;
+        }
+
+        /* 5. Googleカスタム検索のフォーム */
+        .gcse-search-form {
+            width: 90%;
+            margin-top: 60px; /* テキストに重ならないように調整 */
+        }
+
+        /* 6. 下部の青いバー */
+        .blue-bar {
+            height: 40px;
+            background-color: #1A73E8; /* 青色 */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .blue-bar .icon {
+            font-size: 20px;
+        }
+
+        /* 7. 下部ナビゲーションバー（画像の下部） */
+        .footer {
+            height: 60px;
+            background-color: #000; /* 黒色 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .footer .icon {
+            font-size: 24px;
+            margin: 0 20px;
+        }
+
+        /* 8. ページ上部のステータスバー（画像の上部） */
+        .status-bar {
+            height: 20px;
+            background-color: #00796B; /* 青緑色 */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="status-bar">
+        <span>22:09</span>
+        <span>4G | 📶 | 52</span>
+    </div>
+
+    <div class="header">
+        <div class="icons">
+            <span class="icon">🍔</span>
+            <span class="icon">📈</span>
+            <span class="icon">⚙️</span>
+        </div>
+        <div class="icons">
+            <span class="icon">👤</span>
+        </div>
+    </div>
+
+    <div class="content-area">
+        <div class="search-area">
+            <div class="text-display">
+                <p>犬</p>
+                <p>いぬ</p>
+                <p>犬</p>
+            </div>
+
+            <script async src="https://cse.google.com/cse.js?cx=84f2167d64386407b"></script>
+            <div class="gcse-searchform-only"></div>
+        </div>
+
+        <div class="blue-bar">
+            <div class="icons">
+                <span class="icon">➕</span>
+            </div>
+            <div class="icons">
+                <span class="icon">🔗</span>
+                <span class="icon">🔄</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="icons">
+            <span class="icon">⬅️</span>
+            <span class="icon">🖥️</span>
+            <span class="icon">➕</span>
+            <span class="icon">📤</span>
+            <span class="icon">🔄</span>
+        </div>
+    </div>
+
+</body>
+</html>
